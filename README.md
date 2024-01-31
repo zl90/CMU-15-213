@@ -19,4 +19,6 @@ A. You hear on the news that Montana has just abolished its
 speed limit, which constitutes 1,500 km of the trip. Your truck
 can travel at 150 km/hr. What will be your speedup for the trip?
 ```
-Answer: Using Ahmdahl's law we can compute the speedup with the formula `S=1(1-a)+a/k` where `a` is the fraction of the original time that we are speeding up, and `k` is the performance factor that we are achieving. In this case, `a = 1500/2500 = 0.6` and `k = 150/100`. So the speedup is `S = 0.4+0.6/1.5 = 0.8`. So we can complete the trip in 80% of the original time.
+Answer: Using Ahmdahl's law we can compute the speedup with the formula `S=1/((1-a)+a/k)` where `a` is the fraction of the original time that we are speeding up, and `k` is the performance factor that we are achieving. In this case, `a = 1500/2500 = 0.6` and `k = 150/100`. So the speedup is `S = 1/(0.4+0.6/1.5) = 1.25`. So we can complete the trip in 80% of the original time.
+
+Another way this can be solved is by computing the original time and dividing it by the new time. Original time is 25 hours (2500km at 100km/h), new time is 20 hours (1000km at 100km/h + 1500km at 150km/h). The speedup will be `S = 25 / 20 = 1.25`.
